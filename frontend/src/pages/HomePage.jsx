@@ -86,7 +86,7 @@ const HomePage = () => {
         {!isRateLimited && (
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 border-b border-white/5 pb-6 gap-4">
             <div>
-              <h1 className="text-2xl font-bold tracking-tight text-white">Workspace_01</h1>
+              <h1 className="text-2xl font-bold tracking-tight text-white">Neural_Vault_01</h1>
               <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">
                 {notes.length} total entries found
               </p>
