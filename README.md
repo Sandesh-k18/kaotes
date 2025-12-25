@@ -26,6 +26,7 @@ Custom multi-node bulk deletion protocol. No browser-blocking alerts.
 
 ### 🛡 FIREWALL PROTECTION
 Integrated rate-limiting. UI shifts to **Hazard Red** during security triggers.
+<img width="1366" height="103" alt="image" src="https://github.com/user-attachments/assets/c36b0b13-a68e-4e2e-9e00-cbe08b25c080" />
 
 
 ### 🧩 ZERO-NODE STANDBY
