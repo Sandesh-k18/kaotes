@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Ensure the HTML and Body don't hide overflow */
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  background-color: #000000;
+}
+
+/* 2. Target Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+  display: block !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  /* Change this to green immediately just to TEST if it works */
+  background: #333333 !important; 
+  border-radius: 10px !important;
+  border: 2px solid #000000 !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00FF9D !important;
+}
+
+/* 3. Target Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00FF9D #000000;
+}
