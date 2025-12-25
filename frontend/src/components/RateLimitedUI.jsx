@@ -4,7 +4,6 @@ const RateLimitedUI = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
       <div className="relative overflow-hidden bg-red-500/5 border border-red-500/20 rounded-[2.5rem] backdrop-blur-xl shadow-[0_0_40px_rgba(239,68,68,0.1)]">
-        
         {/* Animated Background Pulse */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50 animate-pulse"></div>
 
@@ -33,11 +32,12 @@ const RateLimitedUI = () => {
 
             <div className="space-y-2">
               <p className="text-gray-400 font-mono text-[11px] uppercase tracking-widest leading-relaxed">
-                Firewall detected excessive request volume from this node. 
+                Firewall detected excessive request volume from this node.
                 Temporary lockdown initiated to protect neural integrity.
               </p>
               <p className="text-red-500/60 font-mono text-[10px] uppercase tracking-[0.2em] animate-pulse">
-                &gt;&gt; Cooling down system... Try again in 60 seconds.
+                &gt;&gt; Neural interface saturated. Cooling down system... Try
+                again in 60 seconds.
               </p>
             </div>
           </div>
@@ -45,7 +45,10 @@ const RateLimitedUI = () => {
 
         {/* Bottom Decorative Bar */}
         <div className="h-1 w-full bg-white/5 flex">
-            <div className="h-full bg-red-500 animate-[loading_10s_ease-in-out_infinite]" style={{ width: '30%' }}></div>
+          <div
+            className="h-full bg-red-500 animate-[loading_10s_ease-in-out_infinite]"
+            style={{ width: "30%" }}
+          ></div>
         </div>
       </div>
     </div>

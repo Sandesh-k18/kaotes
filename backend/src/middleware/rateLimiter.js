@@ -2,27 +2,26 @@ import ratelimit from "../config/upstash.js";
 
 const rateLimiter = async (req, res, next) => {
   try {
-    // Identify the user by their IP address
-    // 'req.ip' works in Express, or use headers if behind a proxy (like Vercel/Render)
-    const identifier = req.ip || req.headers["x-forwarded-for"] || "global";
+    // 1. Identify by User ID if logged in, otherwise fallback to IP
+    // This ensures that 'User A' doesn't get 'User B' blocked.
+    const identifier = req.user?._id?.toString() || req.ip || "global";
 
     const { success, limit, reset, remaining } = await ratelimit.limit(identifier);
 
-    // Optional: Send rate limit info in headers (good practice)
     res.setHeader("X-RateLimit-Limit", limit);
     res.setHeader("X-RateLimit-Remaining", remaining);
     res.setHeader("X-RateLimit-Reset", reset);
 
     if (!success) {
+      // IMPORTANT: Status 429 is what triggers your React 'isRateLimited' state
       return res.status(429).json({
-        message: "Too many requests, please try again later.",
+        message: "Too many requests, slow down",
       });
     }
 
     next();
   } catch (error) {
     console.error("Rate limit error:", error);
-    // Usually, you want to allow the request if the rate limiter fails
     next(); 
   }
 };

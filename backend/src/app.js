@@ -30,7 +30,6 @@ if (process.env.NODE_ENV !== "development") {
 app.use(express.json()); // this middleware will parse JSON bodies: req.body
 
 app.set("trust proxy", 1); // Trust first proxy, to implement IP based rateLimiting
-app.use(rateLimiter);
 
 // our simple custom middleware
 // app.use((req, res, next) => {
@@ -40,7 +39,7 @@ app.use(rateLimiter);
 app.use(passport.initialize());
 
 app.use("/api/auth", authRoutes);
-app.use("/api/notes", protect, notesRoutes);
+app.use("/api/notes", protect, rateLimiter, notesRoutes);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));

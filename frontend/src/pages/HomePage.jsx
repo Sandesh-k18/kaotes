@@ -5,7 +5,13 @@ import api from "../lib/axios";
 import toast from "react-hot-toast";
 import NoteCard from "../components/NoteCard";
 import NotesNotFound from "../components/NotesNotFound";
-import { LoaderIcon, ArrowUpDownIcon, ClockIcon, Trash2Icon, XIcon } from "lucide-react";
+import {
+  LoaderIcon,
+  ArrowUpDownIcon,
+  ClockIcon,
+  Trash2Icon,
+  XIcon,
+} from "lucide-react";
 
 const HomePage = () => {
   const [isRateLimited, setIsRateLimited] = useState(false);
@@ -44,19 +50,24 @@ const HomePage = () => {
   }, [notes, sortOrder]);
 
   const toggleSelect = (id) => {
-    setSelectedIds(prev =>
-      prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
+    setSelectedIds((prev) =>
+      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
     );
   };
 
   const handleBulkDelete = async () => {
-    if (!window.confirm(`Are you sure you want to permanently delete ${selectedIds.length} notes?`)) return;
+    if (
+      !window.confirm(
+        `Are you sure you want to permanently delete ${selectedIds.length} notes?`
+      )
+    )
+      return;
 
     try {
       // API call to your backend bulk-delete endpoint
       await api.post("/notes/bulk-delete", { ids: selectedIds });
 
-      setNotes(notes.filter(n => !selectedIds.includes(n._id)));
+      setNotes(notes.filter((n) => !selectedIds.includes(n._id)));
       setSelectedIds([]);
       toast.success(`${selectedIds.length} notes purged from system`);
     } catch (error) {
@@ -86,9 +97,11 @@ const HomePage = () => {
         {!isRateLimited && (
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 border-b border-white/5 pb-6 gap-4">
             <div>
-              <h1 className="text-2xl font-bold tracking-tight text-white">Neural_Vault_01</h1>
+              <h1 className="text-2xl font-bold tracking-tight text-white">
+                Neural_Vault_01
+              </h1>
               <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">
-                {notes.length} total entries found
+                {notes.length} total logs found
               </p>
             </div>
 
