@@ -5,7 +5,8 @@
 
 A high-performance, cyberpunk-themed note-taking application built with the **MERN** stack. Features a neon-on-black aesthetic, real-time bulk operations, and crypt-style UI feedback.
 
-![Header Image] https://github.com/Sandesh-k18/kaotes
+https://github.com/Sandesh-k18/kaotes/blob/main/docs/navbar.png
+https://github.com/Sandesh-k18/kaotes/blob/main/docs/header.png
 
 ## 🛠 SYSTEM SPECIFICATIONS
 
@@ -109,13 +110,9 @@ npm run dev
 
 ---
 
-### 📸 Recommended Screenshots for your GitHub:
-To make this README look professional, I recommend taking these **4 specific screenshots** and putting them in a folder named `/screenshots` in your repo:
-
-1.  **Dashboard:** Capture the grid of notes with that 1px neon green top border glowing.
-2.  **Bulk Selection:** Check 3 notes so the green "Selected" action bar appears at the top.
-3.  **The Purge Modal:** Click the delete icon to show your new Red custom confirmation modal.
-4.  **Empty State:** Delete all notes to show the "Neural Path Empty" terminal screen.
+https://github.com/Sandesh-k18/kaotes/blob/main/docs/NoteCard.png
+https://github.com/Sandesh-k18/kaotes/blob/main/docs/selectedNoteCard.png
+https://github.com/Sandesh-k18/kaotes/blob/main/docs/UserCard.png
 
 
 ```
