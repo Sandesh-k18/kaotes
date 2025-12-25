@@ -123,6 +123,8 @@ POST,/api/notes/bulk-delete,Execute mass system purge
 > **Disclaimer:** This archive is for authorized personnel only. Neural paths are monitored for security.
 
 Furthermore,
+
+
 <img width="357" height="262" alt="image" src="https://github.com/user-attachments/assets/4b629d13-955a-4569-9d55-622c11b4b458" />
 
 <img width="370" height="238" alt="image" src="https://github.com/user-attachments/assets/b5e5456d-88ba-43bb-96cf-ad76377c2a79" />
