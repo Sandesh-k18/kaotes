@@ -1,5 +1,3 @@
-This README is designed to mirror your project’s high-tech, cyber-neon aesthetic. It uses monospaced formatting, "system-log" style language, and includes placeholders for the screenshots you should take.
-
 ### `README.md`
 
 ```markdown
