@@ -5,7 +5,7 @@
 
 A high-performance, cyberpunk-themed note-taking application built with the **MERN** stack. Features a neon-on-black aesthetic, real-time bulk operations, and crypt-style UI feedback.
 
-![Header Image](https://raw.githubusercontent.com/your-username/your-repo/main/screenshots/header_banner.png)
+![Header Image] https://github.com/Sandesh-k18/kaotes
 
 ## 🛠 SYSTEM SPECIFICATIONS
 
@@ -45,8 +45,8 @@ Themed empty states featuring custom illustrations and terminal-style prompts to
 
 ### 1. Clone the Node
 ```bash
-git clone [https://github.com/your-username/neural-vault.git](https://github.com/your-username/neural-vault.git)
-cd neural-vault
+git clone https://github.com/Sandesh-k18/kaotes
+cd kaotes
 
 ```
 
