@@ -35,13 +35,6 @@ Themed empty states for fresh system initializations.
 
 ---
 
-## ⚙️ INITIALIZATION
-
-1. **Clone & Install**
-   ```bash
-   git clone [https://github.com/Sandesh-k18/kaotes](https://github.com/Sandesh-k18/kaotes)
-   npm install && cd client && npm install
-
 ## 🛰 CORE PROTOCOLS
 
 ### 🟢 SECURE WORKSPACE
@@ -66,52 +59,14 @@ Themed empty states featuring custom illustrations and terminal-style prompts to
 
 ---
 
-## ⚙️ INITIALIZATION
-
-### 1. Clone the Node
-```bash
-git clone https://github.com/Sandesh-k18/kaotes
-cd kaotes
-
-```
-
-### 2. Configure Environment Variables
-```
-PORT=3000
-MONGODB_URI=your_uri
-JWT_SECRET=your_secret
-
-```
-
-###3. Install dependencies
-```
-Bash
-
-# Install Server dependencies
-npm install
-
-# Install Client dependencies
-cd client
-npm install
-
-```
-
-###4. Boot System
-```
-Bash
-
-# Run from root (using concurrently or separately)
-npm run dev
-
-```
-###5. 📡 API Endpoints
+###. 📡 API Endpoints
 ```
 GET/api/notes                   Fetch all user-owned nodes
 POST/api/notes                  Initialize new data entry
 DELETE/api/notes/:id            Purge specific node
 POST/api/notes/bulk-delete      Execute mass system purge
 ```
-###6. 🎨 THEME SPECIFICATIONS
+###. 🎨 THEME SPECIFICATIONS
 ```
     Background: #000000 (Void Black)
     Primary Accent: #00FF9D (Neural Green)
