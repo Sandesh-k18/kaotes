@@ -106,7 +106,10 @@ npm run dev
 ```
 ###5. 📡 API Endpoints
 ```
-📡 API ENDPOINTSMETHODENDPOINTFUNCTIONGET/api/notesFetch all user-owned nodesPOST/api/notesInitialize new data entryDELETE/api/notes/:idPurge specific nodePOST/api/notes/bulk-deleteExecute mass system purge
+GET/api/notes                   Fetch all user-owned nodes
+POST/api/notes                  Initialize new data entry
+DELETE/api/notes/:id            Purge specific node
+POST/api/notes/bulk-delete      Execute mass system purge
 ```
 ###6. 🎨 THEME SPECIFICATIONS
 ```
