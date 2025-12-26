@@ -25,8 +25,12 @@ const Navbar = () => {
 
           {/* MIDDLE BANNER (Status Bar Style) */}
           <div className="hidden md:flex flex-1 justify-center">
-            <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 shadow-inner">
-              <Zap size={12} className="text-[#00FF9D] animate-pulse" />
+            <div
+              className="flex items-center gap-2 px-4 py-1.5 rounded-full
+                bg-white/5 border border-white/10 shadow-inner
+                animate-pulse"
+            >
+              <Zap size={14} className="text-[#00FF9D]" />
               <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-gray-400">
                 System Online: <span className="text-white">Ready to Sync</span>
               </span>
