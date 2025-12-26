@@ -24,10 +24,7 @@ dist-ssr
 *.sw?
 
 
-/backend/package.json
-/frontend/package.json
-backend/node_modules/
-frontend/node_modules/
+
 
 .env
 
