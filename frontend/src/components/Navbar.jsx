@@ -12,7 +12,7 @@ const Navbar = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-[#00FF9D]/20 blur-md rounded-lg group-hover:bg-[#00FF9D]/40 transition-all"></div>
                 <img
-                  src="./kaotes.png"
+                  src="./kaotes.webp"
                   alt="KA Notes"
                   className="relative h-8 w-auto object-contain"
                 />

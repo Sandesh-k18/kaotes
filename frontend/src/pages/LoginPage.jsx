@@ -11,7 +11,7 @@ const LoginPage = () => {
     <div className="flex flex-col items-center justify-center h-screen text-white">
       <h1 className="text-4xl font-bold mb-8">
         <img
-          src="./kaotes.png"
+          src="./kaotes.webp"
           alt="KA Notes"
           className="h-8 w-auto object-contain mr-4"
         />

@@ -18,10 +18,12 @@ const PORT = process.env.PORT || 5001;
 const __dirname = path.resolve();
 
 // middleware
-if (process.env.NODE_ENV !== "development") {
+// middleware
+if (process.env.NODE_ENV === "production") {
   app.use(
     cors({
-      origin: ["http://localhost:5173"],
+      origin: ["https://kaotes.sandeshkharel.com.np"], // Your actual production domain
+      credentials: true,
     })
   );
 } else {
