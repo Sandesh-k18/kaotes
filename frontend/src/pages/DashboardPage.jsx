@@ -13,7 +13,7 @@ import {
   XIcon,
 } from "lucide-react";
 
-const HomePage = () => {
+const DashboardPage = () => {
   const [isRateLimited, setIsRateLimited] = useState(false);
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -196,4 +196,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default DashboardPage;
