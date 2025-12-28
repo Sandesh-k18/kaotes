@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 gap-4">
           {/* LOGO SECTION */}
           <div className="flex-shrink-0">
-            <Link to={"/"} className="flex items-center group">
+            <Link to={"/dashboard"} className="flex items-center group">
               <div className="relative">
                 <div className="absolute inset-0 bg-[#00FF9D]/20 blur-md rounded-lg group-hover:bg-[#00FF9D]/40 transition-all"></div>
                 <img
@@ -41,7 +41,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             {/* Create Button */}
             <Link
-              to={"/create"}
+              to={"/dashboard/create"}
               className="flex items-center gap-2 bg-[#00FF9D] text-black px-4 py-2 rounded-xl font-bold text-sm hover:shadow-[0_0_20px_rgba(0,255,157,0.4)] transition-all active:scale-95"
             >
               <PlusIcon className="size-4 stroke-[3px]" />
@@ -50,7 +50,7 @@ const Navbar = () => {
 
             {/* Profile Button - Glass Style */}
             <Link
-              to="/profile"
+              to="/dashboard/profile"
               className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-[#00FF9D]/50 transition-all duration-300 group"
             >
               <div className="relative">

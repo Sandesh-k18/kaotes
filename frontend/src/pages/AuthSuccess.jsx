@@ -9,9 +9,10 @@ const AuthSuccess = () => {
     const token = searchParams.get("token");
     if (token) {
       localStorage.setItem("token", token); // Save the "ID card"
-      navigate("/"); // Send them to the home/notes page
+      navigate("/dashboard"); // Send them to the home/notes page
     } else {
-      navigate("/login"); // Something went wrong
+      console.log("Session error !, try login again")
+      navigate("/"); // Something went wrong
     }
   }, [searchParams, navigate]);
 

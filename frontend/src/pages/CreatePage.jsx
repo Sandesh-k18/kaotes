@@ -27,7 +27,7 @@ const CreatePage = () => {
       });
 
       toast.success("Note created successfully!");
-      navigate("/");
+      navigate("/dashboard");
     } catch (error) {
       console.log("Error creating note", error);
       if (error.response?.status === 429) {
@@ -48,7 +48,7 @@ const CreatePage = () => {
       <div className="max-w-2xl mx-auto">
         {/* Back Button with Neon Hover */}
         <Link 
-          to={"/"} 
+          to={"/dashboard"} 
           className="inline-flex items-center gap-2 text-gray-400 hover:text-[#00FF9D] transition-colors mb-8 group"
         >
           <ArrowLeftIcon className="size-5 group-hover:-translate-x-1 transition-transform" />

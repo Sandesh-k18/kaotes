@@ -25,7 +25,7 @@ const Profile = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    navigate("/");
   };
 
   if (loading) {
@@ -111,7 +111,7 @@ const Profile = () => {
               </button>
               
               <button
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/dashboard")}
                 className="w-full py-3 text-sm text-gray-500 hover:text-[#00FF9D] transition-colors font-mono"
               >
                 &lt; Back to Notes /&gt;
