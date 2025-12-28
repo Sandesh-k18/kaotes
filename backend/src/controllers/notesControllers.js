@@ -116,30 +116,3 @@ export async function bulkDelete(req, res) {
     }
   }
 }
-// export function robotsTxt(req, res) {
-//   res.type("text/plain");
-//   res.send(
-//     `
-// User-agent: *
-// Allow: /
-// Disallow: /api/
-// Disallow: /dashboard/
-// Disallow: /auth/
-
-// Sitemap: https://kaotes.sandeshkharel.com.np/sitemap.xml
-//   `.trim()
-//   );
-// }
-
-// export function sitemapXML(req, res) {
-//   res.type("application/xml");
-//   res.send(`<?xml version="1.0" encoding="UTF-8"?>
-// <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-//   <url>
-//     <loc>https://kaotes.sandeshkharel.com.np/</loc>
-//     <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
-//     <changefreq>monthly</changefreq>
-//     <priority>1.0</priority>
-//   </url>
-// </urlset>`);
-// }

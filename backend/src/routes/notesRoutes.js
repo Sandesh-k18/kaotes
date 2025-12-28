@@ -11,8 +11,6 @@ import { protect } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-// router.get("/robots.txt", robotsTxt);
-// router.get("/sitemap.xml", sitemapXML);
 
 router.use(protect);
 router.get("/", getAllNotes);

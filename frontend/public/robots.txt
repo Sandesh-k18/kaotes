@@ -1,0 +1,20 @@
+# KAOTES Robot Exclusion Protocol
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+
+# Public Pages to Index
+Allow: /
+Allow: /login
+Allow: /about
+Allow: /legal
+
+# Restricted Neural Sectors (Private Data)
+Disallow: /dashboard/
+Disallow: /dashboard
+Disallow: /profile/
+Disallow: /auth-success
+Disallow: /api/
+
+# Sitemap Location
+Sitemap: https://kaotes.sandeshkharel.com.np/sitemap.xml

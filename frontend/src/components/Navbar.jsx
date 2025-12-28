@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 gap-4">
           {/* LOGO SECTION */}
           <div className="flex-shrink-0">
-            <Link to={"/dashboard"} className="flex items-center group">
+            <Link to={"/"} className="flex items-center group">
               <div className="relative">
                 <div className="absolute inset-0 bg-[#00FF9D]/20 blur-md rounded-lg group-hover:bg-[#00FF9D]/40 transition-all"></div>
                 <img

@@ -9,6 +9,9 @@ import Profile from "./pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
 import "./index.css";
 import LandingPage from "./pages/LandingPagre";
+import AboutPage from "./pages/AboutPage";
+import LegalPage from "./pages/LegalPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const App = () => {
   return (
@@ -42,6 +45,8 @@ const App = () => {
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/auth-success" element={<AuthSuccess />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/legal" element={<LegalPage />} />
         <Route
           path="/dashboard/profile"
           element={
@@ -50,6 +55,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );
