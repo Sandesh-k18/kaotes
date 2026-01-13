@@ -36,7 +36,7 @@ const LandingPage = () => {
             <img
               src="/kaotes.webp"
               alt="KAotes Logo"
-              className="h-8 w-auto drop-shadow-[0_0_8px_rgba(16,185,129,0.5)] group-hover:scale-105 transition-transform duration-300"
+              className="h-8 w-[70px] drop-shadow-[0_0_8px_rgba(16,185,129,0.5)] group-hover:scale-105 transition-transform duration-300"
             />
             <span className="font-mono font-bold tracking-tighter text-xl uppercase">
               KA<span className="text-emerald-400">OTES</span>
