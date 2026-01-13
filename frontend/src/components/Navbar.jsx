@@ -14,7 +14,9 @@ const Navbar = () => {
                 <img
                   src="./kaotes.webp"
                   alt="KA Notes"
-                  className="relative h-8 w-auto object-contain"
+                  height={32}
+                  width={69.93}
+                  className="relative object-contain"
                 />
               </div>
               <span className="hidden sm:block ml-3 font-mono font-black text-xl tracking-tighter text-white">
