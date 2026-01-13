@@ -15,6 +15,10 @@ import {
 
 const LandingPage = () => {
   const currentYear = new Date().getFullYear();
+
+  // We check if a token exists in localStorage to determine the destination.
+  const isAuthenticated = !!localStorage.getItem("token");
+
   return (
     <div className="min-h-screen flex flex-col bg-[#020F0C] text-emerald-50 selection:bg-emerald-500/30 relative font-sans overflow-x-hidden">
       {/* --- BACKGROUND ARCHITECTURE --- */}
@@ -67,12 +71,13 @@ const LandingPage = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+            {/* CORRECTED LAPSE: Smart Redirect Link */}
             <Link
-              to="/dashboard"
+              to={isAuthenticated ? "/dashboard" : "/login"}
               className="group relative px-12 py-5 bg-emerald-500 text-black font-black rounded-2xl transition-all hover:scale-105 hover:shadow-[0_0_50px_rgba(16,185,129,0.4)] overflow-hidden"
             >
               <div className="relative z-10 flex items-center gap-2 uppercase tracking-tighter">
-                Access the Vault{" "}
+                {isAuthenticated ? "Access the Vault" : "Authenticate Access"}{" "}
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1 transition-transform"
