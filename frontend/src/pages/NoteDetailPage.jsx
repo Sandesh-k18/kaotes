@@ -76,7 +76,7 @@ const NoteDetailPage = () => {
         {/* TOP BAR */}
         <div className="flex items-center justify-between mb-8">
           <Link 
-            to="/" 
+            to="/dashboard" 
             className="inline-flex items-center gap-2 text-gray-400 hover:text-[#00FF9D] transition-colors group"
           >
             <ArrowLeftIcon className="size-5 group-hover:-translate-x-1 transition-transform" />
