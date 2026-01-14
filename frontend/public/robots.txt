@@ -6,6 +6,7 @@ Allow: /
 Allow: /login
 Allow: /about
 Allow: /privacy-policy
+Allow: /legal
 
 # Restricted Sectors
 Disallow: /dashboard/
