@@ -206,7 +206,7 @@ const LandingPage = () => {
                     <span className="text-emerald-500/30 group-hover:text-emerald-400">
                       01
                     </span>
-                    [ Privacy Policy ]
+                    [ Privacy Policy / Legal ]
                   </Link>
                 </li>
                 <li>
