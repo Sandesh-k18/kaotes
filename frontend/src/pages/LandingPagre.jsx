@@ -36,6 +36,8 @@ const LandingPage = () => {
             <img
               src="/kaotes.webp"
               alt="KAotes Logo"
+              width="70"
+              height="32"
               className="h-8 w-[70px] drop-shadow-[0_0_8px_rgba(16,185,129,0.5)] group-hover:scale-105 transition-transform duration-300"
             />
             <span className="font-mono font-bold tracking-tighter text-xl uppercase">
@@ -43,16 +45,18 @@ const LandingPage = () => {
             </span>
           </Link>
 
-          <Link
-            to="/login"
-            className="text-[10px] font-mono uppercase tracking-[0.2em] text-emerald-400/80 hover:text-emerald-300 transition-colors border-b border-emerald-500/20 pb-1"
-          >
-            [ Request_New_Access ]
-          </Link>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/login"
+              className="text-[10px] font-mono uppercase tracking-[0.2em] text-emerald-400/80 hover:text-emerald-300 transition-colors border-b border-emerald-500/20 pb-1"
+            >
+              [ Request_New_Access ]
+            </Link>
+          </div>
         </nav>
 
         {/* --- HERO SECTION --- */}
-        <header className="max-w-6xl mx-auto pt-20 pb-32 px-6 text-center">
+        <header className="max-w-6xl mx-auto pt-20 pb-16 px-6 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/5 border border-emerald-500/10 mb-10 backdrop-blur-md">
             <Fingerprint size={14} className="text-emerald-400 animate-pulse" />
             <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-emerald-400">
@@ -64,14 +68,15 @@ const LandingPage = () => {
             NEURAL <br /> KNOWLEDGE
           </h1>
 
+          {/* VERIFICATION FIX: Clear App Purpose Statement */}
           <p className="text-emerald-400/70 text-base md:text-lg max-w-xl mx-auto mb-14 font-mono leading-relaxed tracking-tight">
-            A high-fidelity digital vault for your intellectual property.
-            Encrypted via distributed MERN logic and protected by edge-level
-            Redis security.
+            KAOTES is a high-fidelity **private note-taking vault** engineered
+            for secure intellectual property storage. Our mission is to provide
+            an encrypted, distributed environment for archiving your neural
+            insights.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-            {/* CORRECTED LAPSE: Smart Redirect Link */}
             <Link
               to={isAuthenticated ? "/dashboard" : "/login"}
               className="group relative px-12 py-5 bg-emerald-500 text-black font-black rounded-2xl transition-all hover:scale-105 hover:shadow-[0_0_50px_rgba(16,185,129,0.4)] overflow-hidden"
@@ -108,17 +113,17 @@ const LandingPage = () => {
             <FeatureCard
               icon={<Lock size={24} />}
               title="01 // SECURITY"
-              desc="Distributed rate-limiting via Upstash prevents unauthorized brute-force attempts."
+              desc="Distributed rate-limiting prevents unauthorized brute-force attempts on your private data."
             />
             <FeatureCard
               icon={<TreePine size={24} />}
               title="02 // ECO_SYSTEM"
-              desc="A low-eye-strain environment designed for long-form writing and archival sessions."
+              desc="A distraction-free interface designed for long-form encrypted writing and neural archival."
             />
             <FeatureCard
               icon={<Zap size={24} />}
               title="03 // SYNC_SPEED"
-              desc="Real-time synchronization ensures knowledge segments are updated instantly."
+              desc="Real-time MERN synchronization ensures your notes are instantly available across all secure nodes."
             />
           </div>
         </section>
@@ -147,7 +152,7 @@ const LandingPage = () => {
               </div>
               <p className="text-[11px] font-mono text-emerald-400/60 uppercase tracking-[0.15em] leading-relaxed max-w-sm">
                 A distributed cryptographic vault engineered for high-fidelity
-                knowledge storage.
+                private knowledge storage.
               </p>
             </div>
 
@@ -189,10 +194,11 @@ const LandingPage = () => {
 
             <div className="space-y-4">
               <h4 className="text-[10px] font-bold text-emerald-400 uppercase tracking-[0.3em]">
-                Protocols
+                Compliance & Protocols
               </h4>
               <ul className="space-y-3 font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-100/70">
                 <li>
+                  {/* VERIFICATION FIX: High-visibility footer link for Privacy Policy */}
                   <Link
                     to="/legal"
                     className="hover:text-emerald-300 transition-all flex items-center gap-2 group"
@@ -200,7 +206,7 @@ const LandingPage = () => {
                     <span className="text-emerald-500/30 group-hover:text-emerald-400">
                       01
                     </span>
-                    [ Privacy & Terms ]
+                    [ Privacy Policy ]
                   </Link>
                 </li>
                 <li>
