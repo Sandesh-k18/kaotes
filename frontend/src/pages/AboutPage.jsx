@@ -80,7 +80,7 @@ const AboutPage = () => {
                   </div>
                   <div>
                     <p className="text-[10px] text-emerald-500/50 uppercase tracking-tighter">
-                      Mainframe_Domain
+                      Master_Domain
                     </p>
                     <p className="text-sm font-bold tracking-tight">
                       sandeshkharel.com.np

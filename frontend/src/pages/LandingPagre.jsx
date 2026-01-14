@@ -172,7 +172,7 @@ const LandingPage = () => {
                       size={12}
                       className="text-emerald-500/30 group-hover:text-emerald-400"
                     />
-                    [ MainDomain ]
+                    [ MasterDomain ]
                   </a>
                 </li>
                 <li>
@@ -200,7 +200,7 @@ const LandingPage = () => {
                 <li>
                   {/* VERIFICATION FIX: High-visibility footer link for Privacy Policy */}
                   <Link
-                    to="/legal"
+                    to="/privacy-policy"
                     className="hover:text-emerald-300 transition-all flex items-center gap-2 group"
                   >
                     <span className="text-emerald-500/30 group-hover:text-emerald-400">

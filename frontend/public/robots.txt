@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 Allow: /login
 Allow: /about
-Allow: /legal
+Allow: /privacy-policy
 
 # Restricted Sectors
 Disallow: /dashboard/
