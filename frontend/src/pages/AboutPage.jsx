@@ -125,7 +125,7 @@ const AboutPage = () => {
         <div className="mt-24 text-center">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-red-500/40 hover:text-emerald-400 transition-all text-[10px] uppercase tracking-[0.5em] group"
+            className="inline-flex items-center gap-2 hover:text-emerald-400 transition-all text-[10px] uppercase tracking-[0.5em] group"
           >
             <span className="group-hover:-translate-x-1 transition-transform">
               {"<"} Return_to_Mainframe {"/ >"}

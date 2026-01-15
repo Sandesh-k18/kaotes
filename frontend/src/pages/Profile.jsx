@@ -53,7 +53,7 @@ const Profile = () => {
               
               {/* 1. Placeholder ICON (Shown if img is loading OR if user has no image) */}
               {(!imgLoaded || !user?.image) && (
-                <div className="relative z-10 w-24 h-24 bg-neutral-900 rounded-full border-2 border-[#00FF9D] flex items-center justify-center">
+                <div className="relative z-20 w-24 h-24 bg-neutral-900 rounded-full border-2 border-[#00FF9D] flex items-center justify-center">
                   <User size={40} className="text-[#00FF9D]" />
                 </div>
               )}
