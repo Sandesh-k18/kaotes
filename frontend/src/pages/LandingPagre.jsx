@@ -70,10 +70,10 @@ const LandingPage = () => {
 
           {/* VERIFICATION FIX: Clear App Purpose Statement */}
           <p className="text-emerald-400/70 text-base md:text-lg max-w-xl mx-auto mb-14 font-mono leading-relaxed tracking-tight">
-            KAOTES is a high-fidelity **private note-taking vault** engineered
-            for secure intellectual property storage. Our mission is to provide
-            an encrypted, distributed environment for archiving your neural
-            insights.
+            KKAOTES is a private note-taking application designed to help you
+            organize and store your important ideas. Our mission is to provide a
+            safe, encrypted space where you can manage your creative thoughts
+            with total privacy.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
@@ -109,21 +109,30 @@ const LandingPage = () => {
           id="features"
           className="max-w-7xl mx-auto py-32 px-6 border-t border-emerald-500/10"
         >
+          <div className="text-center mb-16">
+            <h2 className="text-emerald-400 font-mono text-[10px] tracking-[0.5em] uppercase mb-4">
+              Core Capabilities
+            </h2>
+            <p className="text-3xl font-bold tracking-tight">
+              Streamlined Note Management
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-10">
             <FeatureCard
               icon={<Lock size={24} />}
-              title="01 // SECURITY"
-              desc="Distributed rate-limiting prevents unauthorized brute-force attempts on your private data."
+              title="01 // SECURE AUTH"
+              desc="We use industry-standard Google OAuth to ensure that only you can access your personal vault and sensitive notes."
             />
             <FeatureCard
               icon={<TreePine size={24} />}
-              title="02 // ECO_SYSTEM"
-              desc="A distraction-free interface designed for long-form encrypted writing and neural archival."
+              title="02 // SMART ORGANIZATION"
+              desc="Easily categorize and store your intellectual property in a clean, distraction-free environment built for deep work."
             />
             <FeatureCard
               icon={<Zap size={24} />}
-              title="03 // SYNC_SPEED"
-              desc="Real-time MERN synchronization ensures your notes are instantly available across all secure nodes."
+              title="03 // CLOUD SYNC"
+              desc="Your notes are saved instantly to our secure database, allowing you to resume your work from any authorized device."
             />
           </div>
         </section>
