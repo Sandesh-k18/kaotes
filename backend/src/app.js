@@ -6,7 +6,7 @@ import path from "path";
 
 import passport from "passport";
 import "./config/passport.js";
-import authRoutes from "./routes/authRoutes.js"; 
+import authRoutes from "./routes/authRoutes.js";
 import { protect } from "./middleware/authMiddleware.js";
 
 import notesRoutes from "./routes/notesRoutes.js";
@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "production") {
     cors({
       origin: ["https://kaotes.sandeshkharel.com.np"], // Your actual production domain
       credentials: true,
-    })
+    }),
   );
 } else {
   app.use(cors());
@@ -40,6 +40,18 @@ app.set("trust proxy", 1); // Trust first proxy, to implement IP based rateLimit
 // });
 app.use(passport.initialize());
 
+const injectDB = async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    res.status(500).json({ error: "Database connection failed" });
+  }
+};
+// 2. Apply it ONLY to API routes
+// The landing page (index.html) will NOT trigger this.
+app.use("/api", injectDB);
+
 app.use("/api/auth", authRoutes);
 app.use("/api/notes", protect, rateLimiter, notesRoutes);
 
@@ -51,8 +63,13 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log("Server started on PORT:", PORT);
+export default app; //for vercel, type: "module"
+
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 5001;
+  connectDB().then(() => { //not matching with vercel, 
+    app.listen(PORT, () => {
+      console.log("Server started on PORT:", PORT);
+    });
   });
-});
+}

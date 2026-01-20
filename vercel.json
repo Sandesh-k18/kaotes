@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "backend/app.js",
+            "src": "backend/src/app.js",
             "use": "@vercel/node"
         },
         {
@@ -13,19 +13,14 @@
             }
         }
     ],
-    "routes": [
+    "rewrites": [
         {
-            "src": "/api/(.*)",
-            "dest": "backend/app.js"
+            "source": "/api/(.*)",
+            "destination": "backend/src/app.js"
         },
         {
-            "src": "/(.*)",
-            "dest": "frontend/dist/$1",
-            "check": true
-        },
-        {
-            "src": "/(.*)",
-            "dest": "frontend/dist/index.html"
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ]
 }
