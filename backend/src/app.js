@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === "production") {
 }
 app.use(express.json()); // this middleware will parse JSON bodies: req.body
 
-// app.set("trust proxy", 1); // Trust first proxy, to implement IP based rateLimiting
+app.set("trust proxy", 1); // Trust first proxy, to implement IP based rateLimiting
 
 // our simple custom middleware
 // app.use((req, res, next) => {
