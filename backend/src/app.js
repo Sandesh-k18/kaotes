@@ -6,7 +6,7 @@ import path from "path";
 
 import passport from "passport";
 import "./config/passport.js";
-import authRoutes from "./routes/authRoutes.js"; // We'll create this next
+import authRoutes from "./routes/authRoutes.js"; 
 import { protect } from "./middleware/authMiddleware.js";
 
 import notesRoutes from "./routes/notesRoutes.js";
@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === "production") {
 }
 app.use(express.json()); // this middleware will parse JSON bodies: req.body
 
-app.set("trust proxy", 1); // Trust first proxy, to implement IP based rateLimiting
+// app.set("trust proxy", 1); // Trust first proxy, to implement IP based rateLimiting
 
 // our simple custom middleware
 // app.use((req, res, next) => {
