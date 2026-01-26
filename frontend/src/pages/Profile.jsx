@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import api from "../lib/axios";
 import { useNavigate } from "react-router";
 import { User, LogOut, Mail, ShieldCheck } from "lucide-react";
@@ -9,7 +9,7 @@ const Profile = () => {
   const [imgLoaded, setImgLoaded] = useState(false); // New state to track image loading
   const navigate = useNavigate();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const fetchProfile = async () => {
       try {
         const res = await api.get("/auth/me");
